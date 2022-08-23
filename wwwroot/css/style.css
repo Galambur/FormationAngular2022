@@ -15,11 +15,11 @@ label {
     font-size: 16px;
 }
 
-div#the-form {
+div#theForm {
     background-color: #fcdbdb;
 }
 
-#the-form input[type=submit] {
+#theForm input[type=submit] {
     background-color: darkolivegreen;
     color: #fcdbdb;
 }
