@@ -13,6 +13,11 @@ namespace DutchTreat
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            if (env.EnvironmentName == "Development")
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
             app.UseStaticFiles();
 
             app.UseRouting();
