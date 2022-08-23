@@ -29,3 +29,5 @@ C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTre
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.Views.pdb
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.csproj.CopyComplete
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.csproj.AssemblyReference.cache
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
