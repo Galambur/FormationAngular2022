@@ -1,10 +1,17 @@
-﻿using DutchTreat.ViewModels;
+﻿using DutchTreat.Services;
+using DutchTreat.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DutchTreat.Controllers
 {
     public class AppController : Controller
     {
+        private readonly IMailService _mailService;
+        public AppController(IMailService mailService)
+        {
+            _mailService = mailService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -28,9 +35,14 @@ namespace DutchTreat.Controllers
         public IActionResult Contact(ContactViewModel model)
         {
             if (ModelState.IsValid)
-                return View();
+            {
+                _mailService.SendMessage("email", model.Subject, model.Message);
+                ViewBag.UserMessage = "Mail sent";
+                ModelState.Clear();
+            }
             else
                 throw new System.Exception("Soucis de validation");
+            return View();
         }
     }
 }
