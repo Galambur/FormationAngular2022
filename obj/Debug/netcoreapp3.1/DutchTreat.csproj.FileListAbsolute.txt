@@ -378,3 +378,5 @@ C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTre
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\config.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\Razor\Views\App\Shop.cshtml.g.cs
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\Data\art.json
