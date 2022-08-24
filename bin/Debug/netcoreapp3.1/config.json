@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "DutchContextDb": "Data Source=.;Initial Catalog=dutchtreat;Integrated Security=True; MultipleActiveResultSets = true"
+  }
+}
