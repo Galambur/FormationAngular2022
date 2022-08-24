@@ -16,28 +16,28 @@
                 <label asp-for="Name">Your name : </label> 
                 <input class="form-control" asp-for="Name"/> 
                 <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
+            </div><br />
 
             <div class="form-group">
                 <label asp-for="Email">Email : </label> 
                 <input class="form-control" type="email" asp-for="Email"/>
                 <span asp-validation-for="Email" class="text-danger"></span> 
-            </div>
+            </div><br />
 
             <div class="form-group">
                 <label asp-for="Subject">Subject : </label> 
                 <input class="form-control" name="subject" asp-for="Subject"/> 
                 <span asp-validation-for="Subject" class="text-danger"></span> 
-            </div>
+            </div><br />
 
             <div class="form-group">
                 <label asp-for="Message">Message :</label> 
                 <textarea class="form-control" rows="4" asp-for="Message"></textarea> 
                 <span asp-validation-for="Message" class="text-danger"></span> 
-            </div>
+            </div> <br />
 
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="Send message" />
+                <button class="btn btn-primary" type="submit" ><i class="fas fa-envelope"></i> Send message</button>
                 <div class="text-success">@ViewBag.UserMessage</div>
             </div>
         </form>
