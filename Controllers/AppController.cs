@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DutchTreat.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DutchTreat.Controllers
 {
@@ -9,6 +10,13 @@ namespace DutchTreat.Controllers
             return View();
         }
 
+        [HttpGet("about")]
+        public IActionResult About()
+        {
+            ViewBag.Title = "About us";
+            return View();
+        }
+
         [HttpGet("contact")]
         public IActionResult Contact()
         {
@@ -16,11 +24,13 @@ namespace DutchTreat.Controllers
             return View();
         }
 
-        [HttpGet("about")]
-        public IActionResult About()
+        [HttpPost("contact")]
+        public IActionResult Contact(ContactViewModel model)
         {
-            ViewBag.Title = "About us";
-            return View();
+            if (ModelState.IsValid)
+                return View();
+            else
+                throw new System.Exception("Soucis de validation");
         }
     }
 }
