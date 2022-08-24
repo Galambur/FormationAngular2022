@@ -8,7 +8,9 @@ namespace DutchTreat
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
+            services.AddRazorPages();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -17,6 +19,10 @@ namespace DutchTreat
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/error");
+            }
 
             app.UseStaticFiles();
 
@@ -24,6 +30,8 @@ namespace DutchTreat
 
             app.UseEndpoints(cfg =>
             {
+                cfg.MapRazorPages();
+
                 cfg.MapControllerRoute("Default",
                     "/{controller}/{action}/{id?}",
                     new { controller = "App", action = "Index" });
