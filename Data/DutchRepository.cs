@@ -1,4 +1,6 @@
 ﻿using DutchTreat.Data.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -35,9 +37,48 @@ namespace DutchTreat.Data
             return _context.Products.Where(p => p.Category == category).ToList();
         }
 
+        public IEnumerable<Order> GetAllOrders()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllOrders");
+                return _context.Orders
+                    .Include(o => o.Items)
+                    .ThenInclude(i => i.Product)
+                    .ToList();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Failed to get all orders : {e}");
+                return null;
+            }
+        }
+
+        public Order GetOrderById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetAllOrders");
+                return _context.Orders
+                    .Include(o => o.Items)
+                    .ThenInclude(i => i.Product)
+                    .SingleOrDefault(o => o.Id == id);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Failed to get all orders : {e}");
+                return null;
+            }
+        }
+
         public bool SaveAll()
         {
             return _context.SaveChanges() > 0;
+        }
+
+        public void AddEntity(object model)
+        {
+            _context.Add(model);
         }
     }
 }
