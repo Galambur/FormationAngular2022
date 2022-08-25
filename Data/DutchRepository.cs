@@ -37,15 +37,17 @@ namespace DutchTreat.Data
             return _context.Products.Where(p => p.Category == category).ToList();
         }
 
-        public IEnumerable<Order> GetAllOrders()
+        public IEnumerable<Order> GetAllOrders(bool includeItems)
         {
             try
             {
-                _logger.LogInformation("GetAllOrders");
+                if(includeItems)
+                    return _context.Orders
+                        .Include(o => o.Items)
+                        .ThenInclude(i => i.Product)
+                        .ToList();
                 return _context.Orders
-                    .Include(o => o.Items)
-                    .ThenInclude(i => i.Product)
-                    .ToList();
+                        .ToList();
             }
             catch (Exception e)
             {
