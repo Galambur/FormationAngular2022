@@ -386,3 +386,4 @@ C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTre
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.pdb
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.genruntimeconfig.cache
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\DutchTreat.csproj.AssemblyReference.cache
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

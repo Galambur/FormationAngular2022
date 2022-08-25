@@ -13,14 +13,13 @@ namespace DutchTreat
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DutchContext>();
-
-            services.AddIdentity<StoreUser, IdentityRole>(options =>
+            services.AddIdentity<StoreUser, IdentityRole>(cfg =>
             {
-                options.User.RequireUniqueEmail = false;
+                cfg.User.RequireUniqueEmail = false;
             })
-                .AddEntityFrameworkStores<DutchContext>()
-                .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<DutchContext>();
+
+            services.AddDbContext<DutchContext>();
 
             services.AddTransient<IMailService, NullMailService>();
             services.AddTransient<DutchSeeder>();
@@ -53,6 +52,9 @@ namespace DutchTreat
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(cfg =>
             {
