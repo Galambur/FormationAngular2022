@@ -56,12 +56,13 @@ namespace DutchTreat.Data
             }
         }
 
-        public Order GetOrderById(int id)
+        public Order GetOrderById(string username, int id)
         {
             try
             {
                 _logger.LogInformation("GetAllOrders");
                 return _context.Orders
+                    .Where(o => o.User.UserName == username)
                     .Include(o => o.Items)
                     .ThenInclude(i => i.Product)
                     .SingleOrDefault(o => o.Id == id);
@@ -81,6 +82,27 @@ namespace DutchTreat.Data
         public void AddEntity(object model)
         {
             _context.Add(model);
+        }
+
+        public IEnumerable<Order> GetAllOrdersByUser(string username, bool includeItems)
+        {
+            try
+            {
+                if (includeItems)
+                    return _context.Orders
+                        .Where(o => o.User.UserName == username)
+                        .Include(o => o.Items)
+                        .ThenInclude(i => i.Product)
+                        .ToList();
+                return _context.Orders
+                        .Where(o => o.User.UserName == username)
+                        .ToList();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Failed to get all orders : {e}");
+                return null;
+            }
         }
     }
 }
