@@ -1,9 +1,17 @@
 ﻿@model IEnumerable<Product>
 @section Scripts {
-    <script src="~/ts/shopper.js"></script>
-    <script src="~/ts/main.js"></script>
+    <script src="~/client/vendor.js"></script>
+    <script src="~/client/polyfills.js"></script>
+    <script src="~/client/runtime.js"></script>
+    <script src="~/client/main.js" asp-append-version="true"></script>
+}
+@section head{
+    <link href="~/client/styles.css" />
 }
 
+<the-shop></the-shop>
+
+@*
 <h1>Shop</h1>
 <p>Count : @Model.Count()</p>
 
@@ -23,5 +31,5 @@
                 <button id="buyButton" class="btn btn-success">Buy</button>
             </div>
         </div>
-    }
+    }*@
 </div>

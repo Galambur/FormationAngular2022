@@ -389,3 +389,8 @@ C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTre
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\tsconfig.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\client\angular.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\client\package-lock.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\client\package.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\client\tsconfig.app.json
+C:\Users\G.DERAMBURE\Documents\Alternance\Formation_angular2\DutchTreat\DutchTreat\bin\Debug\netcoreapp3.1\client\tsconfig.json
