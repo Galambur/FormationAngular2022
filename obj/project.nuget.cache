@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h3f4UfSoARWnEq3bw4E8I1ulQ/eVcw7LGb/8KuvFz/4SAOqvtAPiqvnRL3XaKl7wy08yt7YJPrUSriEUMkYImQ==",
+  "dgSpecHash": "uesoMMT/bd8CBJopO8kLxiTatYUwsZzwKTVYTUmS+mlsXgQGhD8bqL3HOlqcg3WOVXV0ZomPx0Gwumbw8lkOCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\G.DERAMBURE\\Documents\\Alternance\\Formation_angular2\\DutchTreat\\DutchTreat\\DutchTreat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.12\\microsoft.aspnetcore.authentication.jwtbearer.3.1.12.nupkg.sha512",
     "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.13\\microsoft.aspnetcore.cryptography.internal.3.1.13.nupkg.sha512",
     "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.13\\microsoft.aspnetcore.cryptography.keyderivation.3.1.13.nupkg.sha512",
     "C:\\Users\\G.DERAMBURE\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.13\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.13.nupkg.sha512",

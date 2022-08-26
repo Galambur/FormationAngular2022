@@ -4,13 +4,23 @@ using DutchTreat.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
+using System.Text;
 
 namespace DutchTreat
 {
     public class Startup
     {
+        private IConfiguration _config { get; }
+
+        public Startup(IConfiguration configuration)
+        {
+            _config = configuration; 
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentity<StoreUser, IdentityRole>(cfg =>
@@ -18,6 +28,18 @@ namespace DutchTreat
                 cfg.User.RequireUniqueEmail = false;
             })
                 .AddEntityFrameworkStores<DutchContext>();
+
+            services.AddAuthentication()
+                .AddCookie()
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidIssuer = _config["Token:Issuer"],
+                        ValidAudience = _config["Token:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Token:Key"]))
+                    };
+                });
 
             services.AddDbContext<DutchContext>();
 
